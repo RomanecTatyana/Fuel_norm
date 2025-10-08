@@ -1,0 +1,100 @@
+# =========================
+# .gitignore for Fuel Norms Project (Python + VS Code + Jupyter)
+# =========================
+
+# --- OS / Editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Python build/cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg*
+build/
+dist/
+.eggs/
+pip-wheel-metadata/
+*.spec
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb~
+
+# --- Testing / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.pytype/
+.pyre/
+.cache/
+
+# --- Environment / secrets ---
+.env
+.env.*
+*.key
+*.pem
+
+# --- Data (keep samples, ignore heavy/raw) ---
+data/raw/**
+data/interim/**
+data/processed/**
+data/external/**
+
+# Allow small sample datasets
+!data/samples/**
+!data/README.md
+
+# --- Reports/Exports ---
+reports/**
+!reports/README.md
+dist/**
+!dist/.gitkeep
+
+# --- Databases ---
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Keep demo DB if stored under data/samples
+!data/samples/**/*.db
+!data/samples/**/*.sqlite*
+!data/samples/fuel_norms_project.db
+
+# --- Logs ---
+*.log
+logs/**
+!logs/.gitkeep
+
+# --- Notebooks outputs (optional) ---
+# If you prefer clean diffs, strip large outputs via nbstripout or ignore rendered exports
+*.nb.html
+*.nb.pdf
+
+# --- Power BI / Excel exports (usually heavy) ---
+*.pbix
+*.xlsx
+!templates/**/*.xlsx
+
+# --- Project artifacts ---
+*.parquet
+*.csv
+!data/samples/**/*.csv
+!data/samples/**/*.parquet
