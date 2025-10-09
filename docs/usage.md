@@ -2,7 +2,7 @@
 
 ## Розрахунок норм
 ```bash
-python scripts/calc_norms.py --db sqlite:///fuel_norms_project.db     --from 2025-01-01 --to 2025-12-31     --out dist/norms_calculated.parquet
+python scripts/calc_norms.py --db sqlite:///fuel_norms_fake.db     --from 2025-01-01 --to 2025-12-31     --out dist/norms_calculated.parquet
 ```
 Параметри:
 - `--db` — рядок підключення до SQLite/іншої БД;
@@ -11,7 +11,7 @@ python scripts/calc_norms.py --db sqlite:///fuel_norms_project.db     --from 202
 
 ## Експорт звіту в Excel
 ```bash
-python scripts/report.py --db sqlite:///fuel_norms_project.db     --out dist/report.xlsx
+python scripts/report.py --db sqlite:///fuel_norms_fake.db     --out dist/report.xlsx
 ```
 
 ## Приклади аналізу у ноутбуках
